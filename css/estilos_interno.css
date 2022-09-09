@@ -1,0 +1,195 @@
+:root {
+    --verde-futbol: #808000;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(../img/grande.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+    background-size: cover;
+    background-color: var(--verde-futbol);
+}
+
+/*menú de navegación*/   
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+header a, button{
+    color: white;
+}
+
+header .nav__link{
+    list-style: none;
+    padding: 20px 20px;
+}
+
+header .nav__link li{
+    display: inline-block;
+    padding: 0 1.6rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+header .nav__link li a:hover{
+    cursor: pointer;
+    color: #5c5c05;
+}
+
+header button{
+    background-color: #5c5c05;
+    cursor: pointer;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 50px;
+}
+
+
+/* Estilo de las cajas */
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    margin: 10px;
+    transition: all 300ms;
+}
+
+.card:hover{
+    width: 350px;
+}
+
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.card .cover img{
+    width: 250px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: auto;
+    top: 40px;
+    filter: drop-shadow(5px 5px 4px rgb(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+
+}
+
+.card .img__back{
+   width: 100%;
+   height: 200px;
+   position: absolute; 
+   bottom: -80px;
+   left: 0;
+   background-size: cover;
+   border-radius: 20px;
+   transition: all 300ms;
+}
+
+.card:hover .img__back{
+    bottom: -40px;
+ }
+
+.card:nth-of-type(1) .img__back{
+    background-image: url(../img/bg1.jpg);
+
+}  
+
+.card:nth-of-type(2) .img__back{
+        background-image: url(../img/bg2.jpg);
+        
+}
+    
+.card:nth-of-type(3) .img__back{
+        background-image: url(../img/bg3.jpg);
+        
+}
+
+.card .description{
+        background: white;
+        margin-top: -10px;
+        padding: 20px;
+        border-radius: 0px 0px 20px 20px;
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;     
+}
+    
+    
+.card .description h2{
+        margin-top: 10px;
+        align-items: center;
+        text-align: center;
+        
+}
+
+.card .description p{
+    margin-top: 10px;
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+ 
+}
+
+.card:hover .description p{
+    margin-top: 10px;
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+ 
+}
+
+
+.card .description input{
+     padding: 10px 40px;
+     margin-top: 20px;
+     border: none;
+     background: var(--verde-futbol);
+     color: white;
+     font-size: 1.4rem;
+     cursor: pointer;
+     border-radius: 8px;
+     transition: all 300ms;
+     justify-content: center;
+ }
+
+ .card .description input:hover{
+    background: #383802;
+}

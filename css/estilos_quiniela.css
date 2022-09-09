@@ -1,0 +1,355 @@
+:root {
+    --verde-futbol: #808000;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(../img/grande.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+    background-size: cover;
+    background-color: var(--verde-futbol);
+}
+
+/*menú de navegación*/   
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+header a, button{
+    color: white;
+}
+
+header .nav__link{
+    list-style: none;
+    padding: 20px 20px;
+}
+
+header .nav__link li{
+    display: inline-block;
+    padding: 0 1.6rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+header .nav__link li a:hover{
+    cursor: pointer;
+    color: #5c5c05;
+}
+
+header button{
+    background-color: #5c5c05;
+    cursor: pointer;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 50px;
+}
+
+ul{
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0 0.8rem;
+}
+
+/*estilo general de p*/
+p {
+    font-weight: 900;
+    line-height: 1.25;
+    margin: 0 0 0 0.8rem;
+    font-size: large;
+}
+
+img {
+    vertical-align: middle;
+    margin: auto;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem;
+    border: 8px solid var(--verde-futbol);
+    border-radius: 15px;
+    background-color:ghostwhite;
+}
+
+/* Barra de progreso */
+.form-box .progress {
+    position: relative;
+    padding: 1.6rem;
+}
+
+.logo {
+    padding: 40px 48px;
+    text-align: center;
+    min-width: 200px;
+}
+
+/* Avance de la barra*/
+.progress ul.progress-steps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+}
+
+.progress ul.progress-steps li{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+}
+
+.progress ul.progress-steps li > span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.6rem;
+    border-radius: 50%;
+    background-color: lightgrey;
+    color: aliceblue;
+    z-index: 1;
+
+}
+
+.progress ul.progress-steps li.active > span{
+    background-color: #808000;
+    color: aliceblue;
+    border: 4px solid rgb(164, 192, 123);
+    z-index: 1;
+
+}
+
+/* formulario */
+.form-box form{
+    width: 100%;
+    padding: 4.8rem;
+    background-color: lightgreen;
+    border-radius: 30px 30px 15px 15px;
+}
+
+form > div {
+    max-width: 400px;
+    margin: 0 auto;
+   
+}
+
+form > div h2{
+    font-weight: 1200;
+    font-size: 3.2rem;
+}
+
+form > div p{
+    margin-bottom: 3.2rem;
+}
+
+form > div > div:not(.checkbox){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+}
+
+form label{
+    display: flex;
+    position: relative;
+    max-width: 250px;
+    margin: auto;
+    font-size: medium;
+    text-align: center;
+}
+
+form input{
+    height: 40px;
+    border-radius: 7px;
+    outline-color: lightgray;
+    border: 1px solid #c4c1c1;
+
+}
+
+form label{
+    font-size:medium;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+
+form .grouping input{
+    max-width: 40px;
+    text-align: center;
+    margin: 0 2.8rem;
+}
+
+form img{
+    margin-top: -5px;
+    max-height: 60px;
+}
+
+/*Se ocultan las partes del formulario */
+
+form > div:not(.btn-group) {
+    display: none;
+    -webkit-animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(10%);
+        transform: translateY(10%);
+    }
+
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+form > div.active {
+    display: block;
+}
+
+
+/*Botones*/
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    margin-top: 3.2rem;
+}
+
+.btn-group [class*="btn-"]{
+    background-color: #808000;
+    color: white;
+    padding: 1.6rem 4.0rem;
+    border: 4px solid rgb(164, 192, 123);
+    border-radius: 30px;
+    cursor: pointer;
+    -webki-transition: background-color .3s, border-color .3s ease-out;
+    transition: background-color .3s, border-color .3s ease-out;
+}
+
+.btn-group [class*="btn-"]:disabled{
+    background-color: gray;
+    border: 4px solid lightgray;
+    cursor: text;
+}
+
+.btn-group [class*="btn-"]:hover:not(:disabled){
+    background-color: #5c5c05;
+    border: 4px solid rgb(192, 223, 145);
+    cursor: text;
+}
+
+.btn-group .btn-submit, 
+.form-eight.active ~.btn-group .btn-next {
+    display: none;
+}
+
+.form-eight.active ~ .btn-group .btn-submit {
+    display: block;
+}
+
+.form-eight.active ~ .btn-group {
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+    .form-box{
+        flex-direction: row;
+    }
+    
+    .form-box .progress{
+     flex: 1 0 35%;
+        max-width: 250px;
+        padding: 4.8em;
+    }
+
+
+    .logo {
+        margin: 0px 30px 0 0;
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+    .progress ul.progress-steps {
+        flex-direction: column;
+    }
+
+    .progress ul.progress-steps li:not(:last-child)::before{
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 25px;
+        width: 2px;
+        height: 35px;
+        background-color: lightgray;
+
+    }
+
+    .form-box form{
+        padding: 3.6rem ;
+        border-radius: 0 15px 15px 0;
+    }
+
+
+    form .grouping input{
+    max-width: 50px;
+    text-align: center;
+    margin: 1.6rem 3.2rem;
+}
+
+    form > button {
+        max-width: 800px;
+        margin: 0 auto;
+       
+    }
+
+    form img{
+        margin-top: -10px;
+        max-height: 75px;
+    }
+    
+}
