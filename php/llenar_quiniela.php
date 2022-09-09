@@ -160,29 +160,20 @@ if(!isset($_SESSION['usuario'])){
                             </div>
                         </div>
                         <div>
-                            <label>  Inglaterra VS Estados Unidos  </label>
-                            <div class="grouping">
-                                <img src="../img/selecciones/inglaterra.png"  alt="">
-                                <input type="number" step="1" min="0" placeholder="0" name="p9_b1" id="p9_b1">
-                                <input type="number" step="1" min="0" placeholder="0" name="p9_b3" id="p9_b3">
-                                <img src="../img/selecciones/usa.png"  alt="">
-                            </div>
-                        </div>
-                        <div>
                             <label>Gales VS Irán</label>
                             <div class="grouping">
                                 <img src="../img/selecciones/gales.png"  alt="">
-                                <input type="number" step="1" min="0" placeholder="0" name="p10_b4" id="p10_b4">
-                                <input type="number" step="1" min="0" placeholder="0" name="p10_b2" id="p10_b2">
+                                <input type="number" step="1" min="0" placeholder="0" name="p9_b4" id="p9_b4">
+                                <input type="number" step="1" min="0" placeholder="0" name="p9_b2" id="p9_b2">
                                 <img src="../img/selecciones/iran.png"  alt="">
                             </div>
                         </div>
                         <div>
-                            <label>Irán VS Estados Unidos</label>
+                            <label>  Inglaterra VS Estados Unidos  </label>
                             <div class="grouping">
-                                <img src="../img/selecciones/iran.png"  alt="">
-                                <input type="number" step="1" min="0" placeholder="0" name="p11_b2" id="p11_b2">
-                                <input type="number" step="1" min="0" placeholder="0" name="p11_b3" id="p11_b3">
+                                <img src="../img/selecciones/inglaterra.png"  alt="">
+                                <input type="number" step="1" min="0" placeholder="0" name="p10_b1" id="p10_b1">
+                                <input type="number" step="1" min="0" placeholder="0" name="p10_b3" id="p10_b3">
                                 <img src="../img/selecciones/usa.png"  alt="">
                             </div>
                         </div>
@@ -190,11 +181,21 @@ if(!isset($_SESSION['usuario'])){
                             <label>Gales VS Inglaterra</label>
                             <div class="grouping">
                                 <img src="../img/selecciones/gales.png"  alt="">
-                                <input type="number" step="1" min="0" placeholder="0" name="p12_b4" id="p12_b4">
-                                <input type="number" step="1" min="0" placeholder="0" name="p12_b1" id="p12_b1">
+                                <input type="number" step="1" min="0" placeholder="0" name="p11_b4" id="p11_b4">
+                                <input type="number" step="1" min="0" placeholder="0" name="p11_b1" id="p11_b1">
                                 <img src="../img/selecciones/inglaterra.png"  alt="">
                             </div>
                         </div>
+                        <div>
+                            <label>Irán VS Estados Unidos</label>
+                            <div class="grouping">
+                                <img src="../img/selecciones/iran.png"  alt="">
+                                <input type="number" step="1" min="0" placeholder="0" name="p12_b2" id="p12_b2">
+                                <input type="number" step="1" min="0" placeholder="0" name="p12_b3" id="p12_b3">
+                                <img src="../img/selecciones/usa.png"  alt="">
+                            </div>
+                        </div>
+                        
                     </div>
 
                     <div class="form-three form-step">
