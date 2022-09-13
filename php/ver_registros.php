@@ -27,5 +27,10 @@ if(!isset($_SESSION['usuario'])){
     
 <p>Aqui se verán las tablas de las quinielas registradas</p>
 
+<ul>
+<li>Esta será la tabla</li>
+</ul>
+
+
 </body>
 </html>
