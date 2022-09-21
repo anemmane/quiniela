@@ -90,6 +90,7 @@ if(!isset($_SESSION['usuario'])){
                                 <img src="../img/selecciones/ecuador.png"  alt="">
                             </div>
                         </div>
+
                         <div>
                             <label>Senegal VS Paises Bajos</label>
                             <div class="grouping">
@@ -561,7 +562,7 @@ if(!isset($_SESSION['usuario'])){
                     <div class="btn-group">
                         <button type="button" class="btn-prev" disabled>Volver</button>
                         <button type="button" class="btn-next">Siguiente</button>
-                        <button type="button" class="btn-submit" type="submit" value="btn-submit" name="btn-submit">Enviar</button>
+                        <button type="submit" class="btn-submit" value="btn-submit" name="btn-submit">Enviar</button>
                     </div>
             </form>
             </div>

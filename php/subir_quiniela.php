@@ -33,7 +33,7 @@ if (isset($_POST['btn-submit'])){
         $quiniela_p1 = "E";
     } else if ($resultado_p1 > 0){
         $quiniela_p1 = "L";
-    } else ($resultado_p1 < 0){
+    } else if ($resultado_p1 < 0){
         $quiniela_p1 = "V";
     }
 
