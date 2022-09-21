@@ -76,7 +76,7 @@ if(!isset($_SESSION['usuario'])){
                         </li>
                     </ul>
                 </div>
-            <form action="">
+            <form action="../php/subir_quiniela.php" method="post" name="quiniela_form">
                     <div class="form-one form-step active">
                         <div class="bg-svg"></div>
                         <h2>Quiniela Grupo A</h2>
@@ -561,7 +561,7 @@ if(!isset($_SESSION['usuario'])){
                     <div class="btn-group">
                         <button type="button" class="btn-prev" disabled>Volver</button>
                         <button type="button" class="btn-next">Siguiente</button>
-                        <button type="button" class="btn-submit">Enviar</button>
+                        <button type="button" class="btn-submit" type="submit" value="btn-submit" name="btn-submit">Enviar</button>
                     </div>
             </form>
             </div>
