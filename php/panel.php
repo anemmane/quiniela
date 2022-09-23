@@ -61,7 +61,7 @@ if(!isset($_SESSION['usuario'])){
         <div class="description">
             <h2>Ver mis quinielas</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, inventore?</p>
-            <input type="button" value="Revisar quinielas completas">
+            <input type="button" value="Revisar quinielas completas" onClick="location.href='../php/ver_registros.php'">
         </div>
     </div>
 
