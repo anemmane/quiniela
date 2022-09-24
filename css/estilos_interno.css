@@ -196,25 +196,38 @@ header button{
 
 /* Estilos de las tablas*/
 
-#datos_tabla {
+.contenedor_tabla{
+    max-width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.contenedor_tabla #datos_tabla {
     border-collapse: collapse;
     width: 100%;
 }
 
-#datos_tabla td, #datos_tabla th {
+.contenedor_tabla #datos_tabla td, #datos_tabla th {
     border: 1px dotted #fff;
     padding: 8px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+
 }
 
-#datos_tabla:nth-child(even){
+.contenedor_tabla #datos_tabla:nth-child(even){
     background-color: beige;
 }
 
-#datos_tabla tr:hover{
+.contenedor_tabla #datos_tabla tr:hover{
     background-color: darkolivegreen;
 }
 
-#datos_tabla th{
+.contenedor_tabla #datos_tabla th{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: justify;

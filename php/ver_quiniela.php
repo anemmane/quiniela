@@ -21,7 +21,7 @@ if(!isset($_SESSION['usuario'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver quinielas ingresadas</title>
+    <title>Descarga tus quinielas</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
@@ -45,27 +45,26 @@ if(!isset($_SESSION['usuario'])){
 <div class="contenedor_tabla">
     <table id="datos_tabla">
         <tr>
-            <th>ID Quiniela</th>
-            <th>Usuario</th>
-            <th>Código</th>
+            <th>Ganador</th>
+            <th>Equipo 1</th>
+            <th>Equipo 2</th>
             <th>Puntos acumulados</th>
-            <th>Descargar Quiniela</th>
         </tr>
 
         <?php
         include '../php/conexion_bd.php';
         $usuario_actual = $_SESSION['usuario'];
+        $id_quiniela = $_GET['id'];
 
-        $query = "select*from tbl_quinielas WHERE quiniela_usuario='".$usuario_actual."' ORDER BY id_quiniela DESC";
+        $query = "select*from tbl_quinielas WHERE (quiniela_usuario='".$usuario_actual."' AND id_quiniela='".$id_quiniela."') ";
         $ejecutar = mysqli_query($conexion, $query);
         while($row=mysqli_fetch_assoc($ejecutar)){?>
 
         <tr>
-            <td><?php echo $row['id_quiniela']; ?></td>
-            <td><?php echo $row['quiniela_usuario']; ?></td>
-            <td><?php echo $row['quiniela_codigo']; ?></td>
+            <td><?php echo $row['quiniela_p1']; ?></td>
+            <td><?php echo $row['quiniela_p1_a1']; ?></td>
+            <td><?php echo $row['quiniela_p1_a2']; ?></td>
             <td>0</td>
-            <td><a href="../php/ver_quiniela.php?id=<?php echo $row['id_quiniela']; ?>">Descargar</a></td>
         </tr>
 
         <?php } ?>
