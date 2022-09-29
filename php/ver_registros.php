@@ -64,7 +64,7 @@ if(!isset($_SESSION['usuario'])){
             <td><?php echo $row['id_quiniela']; ?></td>
             <td><?php echo $row['quiniela_usuario']; ?></td>
             <td><?php echo $row['quiniela_codigo']; ?></td>
-            <td>0</td>
+            <td><?php echo $row['quiniela_puntos']; ?></td>
             <td><a href="../php/ver_quiniela.php?id=<?php echo $row['id_quiniela']; ?>">Descargar</a></td>
         </tr>
 
