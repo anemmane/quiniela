@@ -1,0 +1,32 @@
+page[size="Letter"] {
+    background: white;
+    height: 21.5cm;
+    width: 28cm;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+}
+
+@media print {
+    body, page[size="Letter"] {
+        margin: 0;
+        box-shadow: 0;
+    }
+}
+
+/* Quitar menú y cabeceras */
+header {
+    display: none !important;
+}
+
+/*Quitar otros elementos */
+table {
+   border-collapse: collapse;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+td {
+    font-size: 11px;
+    line-height: 120%;
+}

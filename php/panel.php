@@ -32,8 +32,12 @@ if(!isset($_SESSION['usuario'])){
     <header>
         <nav>
             <ul class="nav__link">
-                <li>Bienvenido <?php echo $_SESSION['usuario'];?></li>
-                <li><a href="panel.php">Panel principal</a></li>   
+                <li>Bienvenido <?php echo $_SESSION['usuario']; $usuario_actual = $_SESSION['usuario'];?></li>
+                <li><a href="panel.php">Panel principal</a></li>
+                <?php if($usuario_actual === 'ADMINISTRADOR'){
+                    echo 
+                        '<li><a href="actualizar_puntos.php">Actualizar tabla general</a></li>';
+                    } else{ }?> 
             </ul>
         </nav>
         <button><a href="../php/cerrar_sesion.php">Cerrar sesión</a></button>
@@ -48,7 +52,7 @@ if(!isset($_SESSION['usuario'])){
         </div>
         <div class="description">
             <h2>Registrar quiniela</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, inventore?</p>
+            <p>Registra las quinielas que quieras, si aciertas resultado te llevas un punto, si aciertas marcador te dan un punto adicional</p>
             <input type="button" value="Registrar una quiniela" onClick="location.href='../php/llenar_quiniela.php'">
         </div>
     </div>
@@ -60,8 +64,8 @@ if(!isset($_SESSION['usuario'])){
         </div>
         <div class="description">
             <h2>Ver mis quinielas</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, inventore?</p>
-            <input type="button" value="Revisar quinielas completas">
+            <p>Revisa todas las quinielas que has registrado, descárgalas e imprímelas</p>
+            <input type="button" value="Revisar quinielas completas" onClick="location.href='../php/ver_registros.php'">
         </div>
     </div>
 
@@ -72,8 +76,8 @@ if(!isset($_SESSION['usuario'])){
         </div>
         <div class="description">
             <h2>Ver tabla de resultados</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, inventore?</p>
-            <input type="button" value="Revisar posiciones y aciertos">
+            <p>Aqui puedes saber tu cantidad de aciertos y ver como van otros usuarios </p>
+            <input type="button" value="Revisar posiciones y aciertos" onClick="location.href='../php/tabla_general.php'">
         </div>
     </div>
 </div>

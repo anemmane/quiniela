@@ -48,7 +48,7 @@ if(isset($_SESSION['usuario'])){
                 <div class="contenedor__login-register">
                     <form action="../php/login_usuario_be.php" method="POST" class="formulario__login">
                         <h2>Iniciar sesión</h2>
-                        <input type="text" placeholder="Correo electrónico" name="correo">
+                        <input type="text" placeholder="Nombre de usuario" name="usuario">
                         <input type="password" placeholder="Contraseña" name="password">
                         <button>Ingresar</button>
                     </form>
