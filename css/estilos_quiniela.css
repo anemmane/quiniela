@@ -26,6 +26,7 @@ body {
     background-color: var(--verde-futbol);
 }
 
+
 /*menú de navegación*/   
 
 header{
@@ -64,6 +65,14 @@ header button{
     padding: 9px 20px;
     border: none;
     border-radius: 50px;
+}
+
+/*estilo general de h4*/
+h3 {
+   font-style: italic;
+   margin-top: -30px;
+   padding-left: 10px;
+   padding-bottom: 10px;
 }
 
 
@@ -214,6 +223,18 @@ form img{
     margin-top: -5px;
     max-height: 50px;
 }
+
+::-webkit-input-placeholder { /* Edge */
+    color: red;
+  }
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+form input ::placeholder {
+    color: red;
+  }
 
 /*Se ocultan las partes del formulario */
 
