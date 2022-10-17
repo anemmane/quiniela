@@ -28,12 +28,12 @@ if(!isset($_SESSION['usuario'])){
 
         window.onload = function () {
         var inputs = document.getElementsByTagName('input');
+        var j = 0;
         for (var i=0; i<inputs.length; i++) {
             inputs[i].addEventListener('input', function(evt) {
                 this.setCustomValidity('');
             });
             inputs[i].addEventListener('invalid', function(evt) {
-                var j = 0;
                 j++;
             // Required
                 if (this.validity.valueMissing) {
